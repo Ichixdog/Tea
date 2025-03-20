@@ -1,0 +1,27 @@
+<section class="products py-5">
+  <div class="container">
+    <h2 class="text-center pb-5 fw-bold">Наши чайные коллекции</h2>
+  </div>
+  <div class="container d-flex justify-content-center">
+    <div class="row row-cols-0 row-cols-md-3 g-4 w-100">
+      <div class="col" *ngFor="let product of products">
+        <div class="card">
+          <img
+            src={{product.image}}
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{product.title}}</h5>
+            <p class="card-text fw-medium">{{product.description | longText}}</p>
+            <a [routerLink]="['/product/', product.id]" class="btn btn-primary px-5">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="loader" *ngIf="loading">
+  <div class="loader-content"></div>
+</div>

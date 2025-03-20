@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-prev-arrow,
+.custom-next-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid blue;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.custom-prev-arrow {
+  left: 10px;
+  padding: 7px 7px 7px 5px;
+}
+
+.custom-next-arrow {
+  right: 10px;
+  padding: 7px 5px 7px 7px;
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-icon {
+  display: none;
+}
+
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+/* ADAPTIVE  */
+
+@media screen and (max-width: 1000px) {
+  .slick {
+    height: 500px;
+  }
+
+  .slide img {
+    height: 500px;
+  }
+
+  .w-25 {
+    width: 75% !important;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slick {
+    height: 400px;
+  }
+
+  .slide img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slick {
+    height: 350px;
+  }
+
+  .slide img {
+    height: 250px;
+    width: 100%;
+  }
+
+  form {
+    justify-content: space-between;
+  }
+
+  .w-25 {
+    width: 100% !important;
+  }
+
+  .navbar-nav {
+    display: none;
+    z-index: 999;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .collapse {
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slick {
+    height: 300px;
+  }
+
+  .slide img {
+    height: 200px;
+    width: 100%;
+  }
+}

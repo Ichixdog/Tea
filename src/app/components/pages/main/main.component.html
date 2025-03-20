@@ -1,0 +1,165 @@
+    <section class="offers d-flex justify-content-center py-5 ">
+      <div class="container-xl col-12">
+        <div class="slick ">
+          <div class="slide d-flex justify-content-center">
+            <img src="../assets/images/slider1.png" alt="slide 1" class="col-10">
+          </div>
+          <!-- <div class="slide">
+            <img src="../assets/images/slider2.png" alt="slide 2">
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider3.png" alt="slide 3">
+          </div> -->
+        </div>
+      </div>
+    </section>
+  
+    <section class="popup container-xl d-flex justify-content-center">
+      <button class="popupBtn border-0" (click)="modalisActive = true">Посмотреть нашу коллекцию чая</button>
+
+      <div class="modal-hidden" *ngIf="modalisActive">
+        <div class="modal-main">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 24 24" class="cancel" (click)="modalisActive = false">
+            <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
+            </svg>
+          Посмотрите наши чайные коллекции
+          <a class="modalBtn" routerLink="/products" (click)="modalisActive = false">Смотреть</a>
+        </div>
+      </div>
+    </section>
+  
+    <section class="answers pt-2 pb-5">
+      <h2 class="text-center fw-bold pb-5 ">Ответы на часто задаваемые вопросы</h2>
+      <div class="container-xl w-auto">
+        <div id="accordion">
+          <h3 class="rounded p-4 fw-bold bg-primary text-white d-flex justify-content-between">Собираете ли вы подарочные боксы? 
+            <span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_3910_43)">
+              <path d="M9.2196 15.5559L0.31951 6.65567C0.113495 6.44982 -6.91001e-08 6.17502 -5.92231e-08 5.88202C-4.93462e-08 5.58901 0.113495 5.31422 0.31951 5.10837L0.974789 4.45292C1.40178 4.02642 2.09576 4.02642 2.52209 4.45292L9.99585 11.9267L17.4779 4.44463C17.6839 4.23878 17.9586 4.12512 18.2514 4.12512C18.5446 4.12512 18.8192 4.23878 19.0254 4.44463L19.6805 5.10007C19.8865 5.30609 20 5.58072 20 5.87373C20 6.16673 19.8865 6.44153 19.6805 6.64738L10.7723 15.5559C10.5656 15.7623 10.2897 15.8756 9.99634 15.8749C9.70187 15.8756 9.4261 15.7623 9.2196 15.5559Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_3910_43">
+              <rect width="20" height="20" fill="white" transform="matrix(-3.3709e-08 1 1 5.66818e-08 0 0)"/>
+              </clipPath>
+              </defs>
+              </svg>
+              
+            </span>
+          </h3>
+          <div class="border-0">
+            <p class="m-0">
+            Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+            </p>
+          </div>
+          <h3 class="rounded p-4 fw-bold bg-primary text-white d-flex justify-content-between">Сколько у вас разновидностей чая?
+            <span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3910_43)">
+                <path d="M9.2196 15.5559L0.31951 6.65567C0.113495 6.44982 -6.91001e-08 6.17502 -5.92231e-08 5.88202C-4.93462e-08 5.58901 0.113495 5.31422 0.31951 5.10837L0.974789 4.45292C1.40178 4.02642 2.09576 4.02642 2.52209 4.45292L9.99585 11.9267L17.4779 4.44463C17.6839 4.23878 17.9586 4.12512 18.2514 4.12512C18.5446 4.12512 18.8192 4.23878 19.0254 4.44463L19.6805 5.10007C19.8865 5.30609 20 5.58072 20 5.87373C20 6.16673 19.8865 6.44153 19.6805 6.64738L10.7723 15.5559C10.5656 15.7623 10.2897 15.8756 9.99634 15.8749C9.70187 15.8756 9.4261 15.7623 9.2196 15.5559Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3910_43">
+                <rect width="20" height="20" fill="white" transform="matrix(-3.3709e-08 1 1 5.66818e-08 0 0)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              </span>
+          </h3>
+          <div class="border-0">
+            <p class="m-0">
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+            </p>
+          </div>
+          <h3 class="rounded p-4 fw-bold bg-primary text-white d-flex justify-content-between">В какой срок осуществляется доставка?
+            <span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3910_43)">
+                <path d="M9.2196 15.5559L0.31951 6.65567C0.113495 6.44982 -6.91001e-08 6.17502 -5.92231e-08 5.88202C-4.93462e-08 5.58901 0.113495 5.31422 0.31951 5.10837L0.974789 4.45292C1.40178 4.02642 2.09576 4.02642 2.52209 4.45292L9.99585 11.9267L17.4779 4.44463C17.6839 4.23878 17.9586 4.12512 18.2514 4.12512C18.5446 4.12512 18.8192 4.23878 19.0254 4.44463L19.6805 5.10007C19.8865 5.30609 20 5.58072 20 5.87373C20 6.16673 19.8865 6.44153 19.6805 6.64738L10.7723 15.5559C10.5656 15.7623 10.2897 15.8756 9.99634 15.8749C9.70187 15.8756 9.4261 15.7623 9.2196 15.5559Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3910_43">
+                <rect width="20" height="20" fill="white" transform="matrix(-3.3709e-08 1 1 5.66818e-08 0 0)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              </span>
+          </h3>
+          <div class="border-0">
+            <p class="m-0">
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <h3 class="rounded p-4 fw-bold bg-primary text-white d-flex justify-content-between">У вас обновляется ассортимент?
+            <span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3910_43)">
+                <path d="M9.2196 15.5559L0.31951 6.65567C0.113495 6.44982 -6.91001e-08 6.17502 -5.92231e-08 5.88202C-4.93462e-08 5.58901 0.113495 5.31422 0.31951 5.10837L0.974789 4.45292C1.40178 4.02642 2.09576 4.02642 2.52209 4.45292L9.99585 11.9267L17.4779 4.44463C17.6839 4.23878 17.9586 4.12512 18.2514 4.12512C18.5446 4.12512 18.8192 4.23878 19.0254 4.44463L19.6805 5.10007C19.8865 5.30609 20 5.58072 20 5.87373C20 6.16673 19.8865 6.44153 19.6805 6.64738L10.7723 15.5559C10.5656 15.7623 10.2897 15.8756 9.99634 15.8749C9.70187 15.8756 9.4261 15.7623 9.2196 15.5559Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3910_43">
+                <rect width="20" height="20" fill="white" transform="matrix(-3.3709e-08 1 1 5.66818e-08 0 0)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              </span>
+          </h3>
+          <div class="border-0">
+            <p class="m-0">
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+            </p>
+            <p class="m-0">
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+          <h3 class="rounded p-4 fw-bold bg-primary text-white d-flex justify-content-between">Какого объема у вас пачки чая?
+            <span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3910_43)">
+                <path d="M9.2196 15.5559L0.31951 6.65567C0.113495 6.44982 -6.91001e-08 6.17502 -5.92231e-08 5.88202C-4.93462e-08 5.58901 0.113495 5.31422 0.31951 5.10837L0.974789 4.45292C1.40178 4.02642 2.09576 4.02642 2.52209 4.45292L9.99585 11.9267L17.4779 4.44463C17.6839 4.23878 17.9586 4.12512 18.2514 4.12512C18.5446 4.12512 18.8192 4.23878 19.0254 4.44463L19.6805 5.10007C19.8865 5.30609 20 5.58072 20 5.87373C20 6.16673 19.8865 6.44153 19.6805 6.64738L10.7723 15.5559C10.5656 15.7623 10.2897 15.8756 9.99634 15.8749C9.70187 15.8756 9.4261 15.7623 9.2196 15.5559Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3910_43">
+                <rect width="20" height="20" fill="white" transform="matrix(-3.3709e-08 1 1 5.66818e-08 0 0)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              </span>
+          </h3>
+          <div class="border-0">
+            <p class="m-0">
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+            </p>
+            <p class="m-0">
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  

@@ -1,0 +1,74 @@
+<section class="order py-5">
+    <div class="container w-25" *ngIf="!orderComplete">
+      <h2 class="text-center fw-bold pb-4">Сделать заказ</h2>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+        <div class="row justify-content-md-center mb-3">
+          <div class="col-6 d-flex flex-column">
+            <label for="name" class="fw-medium mb-1">Имя</label>
+            <input type="text" formControlName="name" id="name" class="border border-1 rounded border-gray">
+            <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+              <small *ngIf="form.get('name')?.hasError('required')" class="text-danger">Имя обязательно</small>
+              <small *ngIf="form.get('name')?.hasError('pattern')" class="text-danger">Имя может содержать только буквы</small>
+            </div>
+          </div>
+          <div class="col-6 d-flex flex-column">
+            <label for="surname" class="fw-medium mb-1">Фамилия</label>
+            <input type="text" formControlName="surname" id="surname" class="border border-1 rounded border-gray">
+            <div *ngIf="form.get('surname')?.invalid && form.get('surname')?.touched">
+              <small *ngIf="form.get('surname')?.hasError('required')" class="text-danger">Фамилия обязательна</small>
+              <small *ngIf="form.get('surname')?.hasError('pattern')" class="text-danger">Фамилия может содержать только буквы</small>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 d-flex flex-column">
+                <label for="product" class="fw-medium mb-1">Товар</label>
+                <input type="text" formControlName="product" id="product" class="border border-1 rounded border-gray">
+            </div>
+            <div class="col-6 d-flex flex-column">
+                <label for="phone" class="fw-medium mb-1">Телефон</label>
+                <input type="tel" formControlName="phone" id="phone"  class="border border-1 rounded border-gray">
+                <div *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
+                  <small *ngIf="form.get('phone')?.hasError('required')" class="text-danger">Телефон обязателен</small>
+                  <small *ngIf="form.get('phone')?.hasError('pattern')" class="text-danger">Телефон должен содержать 11 цифр</small>
+                </div>
+              </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-6 d-flex flex-column">
+            <label for="country" class="fw-medium mb-1">Страна</label>
+            <input type="text" formControlName="country" id="country"  class="border border-1 rounded border-gray">
+          </div>
+          <div class="col-6 d-flex flex-column">
+            <label for="zip" class="fw-medium mb-1">Индекс</label>
+            <input type="text" formControlName="zip" id="zip"  class="border border-1 rounded  border-gray">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col d-flex flex-column">
+            <label for="address" class="fw-medium mb-1">Адрес</label>
+            <input type="text" formControlName="address" id="address" class="border border-1 rounded border-gray">
+            <div *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+              <small *ngIf="form.get('address')?.hasError('required')" class="text-danger">Адрес обязателен</small>
+              <small *ngIf="form.get('address')?.hasError('pattern')" class="text-danger">Адресс может содержать буквы, цифры, пробелы, дефис и слеш</small>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+            <div class="d-flex flex-column">
+                <label for="comment" class="fw-medium mb-1">Комментарий</label>
+                <input type="text" formControlName="comment" id="comment"  class="border border-1 rounded border-gray">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button type="submit" [disabled]="form.invalid" enable  class="btn btn-primary px-4 submit-btn col-10">Отправить</button>
+            <div *ngIf="orderFailed">Что-то пошло не так, попробуйте еще раз</div>
+        </div>
+      </form>
+    </div>
+    <div class="hidden-block" *ngIf="orderComplete">
+      <div class="container">
+        <h2 class="fs-1 text-center py-5">Спасибо за заказ. Мы свяжемся с вами в ближайшее время!</h2>
+      </div> 
+    </div>
+  </section>

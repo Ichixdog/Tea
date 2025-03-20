@@ -1,0 +1,48 @@
+.popupBtn {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: #0275d8;
+}
+
+.modal-hidden {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.438);
+  z-index: 1;
+}
+
+.modal-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+}
+
+.modalBtn {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #0275d8;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.cancel{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

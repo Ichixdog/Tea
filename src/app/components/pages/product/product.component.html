@@ -1,0 +1,18 @@
+<div class="product" *ngIf="product">
+    <div class="product-image">
+        <img  src={{product.image}} alt="">
+    </div>
+    <div class="product-info">
+        <h2 class="">{{product.title}}</h2>
+        <div class="product-desc">{{product.description}}</div>
+        <div class="price-and-action">
+            <div class="price">{{product.price | currency}}</div>
+            <a routerLink="/order" [queryParams]="{title: product.title}" class="btn btn-primary px-5">Купить</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="loader" *ngIf="loading">
+    <div class="loader-content"></div>
+  </div>
