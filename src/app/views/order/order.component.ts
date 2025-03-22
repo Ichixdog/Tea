@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/core/data.service';
 
 @Component({
   selector: 'app-order',
